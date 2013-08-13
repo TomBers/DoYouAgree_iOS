@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <FacebookSDK/FacebookSDK.h>
 
-@interface dyaViewController : UIViewController
+@interface dyaViewController : UIViewController <UITextFieldDelegate>
+@property (strong, nonatomic) IBOutlet UITextField *codeField;
+@property (strong, nonatomic) IBOutlet UIButton *okButton;
+@property (strong, nonatomic) IBOutlet UILabel *fbUserLabel;
+
 
 @end
