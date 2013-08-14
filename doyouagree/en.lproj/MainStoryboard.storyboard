@@ -48,11 +48,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="kIi-Nc-YRg" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="2fd-kB-kgI"/>
                             <constraint firstItem="kIi-Nc-YRg" firstAttribute="top" secondItem="3" secondAttribute="top" constant="134" id="9Qt-fm-sP7"/>
                             <constraint firstItem="ejZ-DS-Uqv" firstAttribute="top" secondItem="DMH-Zt-wKy" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Cy4-hg-y19"/>
-                            <constraint firstItem="DMH-Zt-wKy" firstAttribute="centerX" secondItem="ejZ-DS-Uqv" secondAttribute="centerX" type="default" id="H0B-1o-jQV"/>
-                            <constraint firstItem="DMH-Zt-wKy" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="51" id="JAg-aE-cbG"/>
-                            <constraint firstItem="DMH-Zt-wKy" firstAttribute="centerX" secondItem="kIi-Nc-YRg" secondAttribute="centerX" type="default" id="Y8a-qe-wL3"/>
+                            <constraint firstItem="ejZ-DS-Uqv" firstAttribute="centerX" secondItem="DMH-Zt-wKy" secondAttribute="centerX" type="default" id="Kca-Kf-C3x"/>
+                            <constraint firstItem="kIi-Nc-YRg" firstAttribute="centerX" secondItem="DMH-Zt-wKy" secondAttribute="centerX" type="default" id="UIQ-eZ-rsj"/>
                             <constraint firstItem="DMH-Zt-wKy" firstAttribute="top" secondItem="kIi-Nc-YRg" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="jdV-Fn-wjZ"/>
                             <constraint firstItem="hqG-Is-eVM" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="pRh-gN-sPu"/>
                             <constraint firstItem="hqG-Is-eVM" firstAttribute="top" secondItem="3" secondAttribute="top" constant="53" id="wle-Nd-2Ci"/>
@@ -78,30 +78,26 @@
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nN2-Ag-WqT">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="418" id="RtZ-3w-oc8"/>
+                                </constraints>
                             </webView>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="1uU-Qb-1jP">
                                 <connections>
                                     <action selector="sliderValue:" destination="inp-wL-rrB" eventType="valueChanged" id="a70-WN-kMM"/>
                                 </connections>
                             </slider>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Disagree" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V2n-8n-50B">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Agree" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="02U-uM-TxE">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="50%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IxN-Sk-X3p">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="I Agree : 50%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IxN-Sk-X3p">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RLy-IA-YAN">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="tgg-Ey-9aZ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Ok">
+                                <state key="normal" title="Agree">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -114,7 +110,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dT3-uM-3e0">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="&lt;">
+                                <state key="normal" title="Back">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -125,29 +121,40 @@
                                     <segue destination="2" kind="modal" modalTransitionStyle="flipHorizontal" id="r2Z-2u-nAo"/>
                                 </connections>
                             </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZZj-5s-uGX">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Share">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="share:" destination="inp-wL-rrB" eventType="touchUpInside" id="owR-lj-cDU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="dT3-uM-3e0" firstAttribute="top" secondItem="V2n-8n-50B" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="0yJ-Dw-NrD"/>
                             <constraint firstItem="nN2-Ag-WqT" firstAttribute="trailing" secondItem="ktQ-s0-ngJ" secondAttribute="trailing" type="default" id="1Lb-ui-F0K"/>
-                            <constraint firstItem="IxN-Sk-X3p" firstAttribute="centerX" secondItem="1uU-Qb-1jP" secondAttribute="centerX" type="default" id="2C4-be-eSH"/>
-                            <constraint firstItem="dT3-uM-3e0" firstAttribute="leading" secondItem="ktQ-s0-ngJ" secondAttribute="leading" type="default" id="3Bd-X6-ZCp"/>
+                            <constraint firstItem="IxN-Sk-X3p" firstAttribute="top" secondItem="1uU-Qb-1jP" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="1kC-d8-5dX"/>
                             <constraint firstItem="nN2-Ag-WqT" firstAttribute="leading" secondItem="ktQ-s0-ngJ" secondAttribute="leading" type="default" id="7Rf-Yx-lxu"/>
-                            <constraint firstAttribute="bottom" secondItem="RLy-IA-YAN" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="HW5-ox-UY9"/>
+                            <constraint firstItem="ZZj-5s-uGX" firstAttribute="baseline" secondItem="dT3-uM-3e0" secondAttribute="baseline" type="default" id="Icu-RG-TqI"/>
                             <constraint firstItem="nN2-Ag-WqT" firstAttribute="top" secondItem="ktQ-s0-ngJ" secondAttribute="top" type="default" id="Ilo-Sq-qUn"/>
-                            <constraint firstItem="02U-uM-TxE" firstAttribute="baseline" secondItem="IxN-Sk-X3p" secondAttribute="baseline" type="default" id="LNg-Qz-iXX"/>
-                            <constraint firstItem="V2n-8n-50B" firstAttribute="leading" secondItem="ktQ-s0-ngJ" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="O8W-E1-par"/>
+                            <constraint firstAttribute="trailing" secondItem="RLy-IA-YAN" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="LQH-H6-a7O"/>
                             <constraint firstItem="1uU-Qb-1jP" firstAttribute="top" secondItem="nN2-Ag-WqT" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="WDE-Eg-jr2"/>
-                            <constraint firstAttribute="trailing" secondItem="02U-uM-TxE" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="agJ-iT-wiv"/>
-                            <constraint firstItem="V2n-8n-50B" firstAttribute="baseline" secondItem="IxN-Sk-X3p" secondAttribute="baseline" type="default" id="cpi-xa-Jmv"/>
-                            <constraint firstAttribute="bottom" secondItem="dT3-uM-3e0" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="hXh-IM-TVF"/>
+                            <constraint firstAttribute="bottom" secondItem="ZZj-5s-uGX" secondAttribute="bottom" constant="12" id="cTJ-wf-7nF"/>
+                            <constraint firstItem="ZZj-5s-uGX" firstAttribute="baseline" secondItem="RLy-IA-YAN" secondAttribute="baseline" type="default" id="cw2-pq-VzF"/>
+                            <constraint firstItem="IxN-Sk-X3p" firstAttribute="centerX" secondItem="1uU-Qb-1jP" secondAttribute="centerX" type="default" id="fHY-9R-j2B"/>
                             <constraint firstAttribute="trailing" secondItem="1uU-Qb-1jP" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="sCQ-L9-D78"/>
-                            <constraint firstItem="RLy-IA-YAN" firstAttribute="centerX" secondItem="IxN-Sk-X3p" secondAttribute="centerX" type="default" id="tQy-f7-2eP"/>
-                            <constraint firstItem="V2n-8n-50B" firstAttribute="top" secondItem="1uU-Qb-1jP" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="v38-ft-8vT"/>
+                            <constraint firstItem="RLy-IA-YAN" firstAttribute="leading" secondItem="ZZj-5s-uGX" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="sf8-iy-vJF"/>
                             <constraint firstItem="1uU-Qb-1jP" firstAttribute="leading" secondItem="ktQ-s0-ngJ" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="yey-an-EgE"/>
+                            <constraint firstItem="dT3-uM-3e0" firstAttribute="leading" secondItem="ktQ-s0-ngJ" secondAttribute="leading" constant="13" id="ziD-sJ-Kx6"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="shareButton" destination="ZZj-5s-uGX" id="Gif-bh-gPM"/>
                         <outlet property="valueLabel" destination="IxN-Sk-X3p" id="o3k-f2-GTL"/>
                         <outlet property="webView" destination="nN2-Ag-WqT" id="nkz-wX-Ljo"/>
                     </connections>
@@ -174,7 +181,9 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/dyaWebView.h"/>
             <relationships>
                 <relationship kind="action" name="okButton:" candidateClass="UIButton"/>
+                <relationship kind="action" name="share:" candidateClass="UIButton"/>
                 <relationship kind="action" name="sliderValue:" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="shareButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="valueLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
             </relationships>

@@ -7,8 +7,11 @@
 //
 
 #import "dyaWebView.h"
+#import <FacebookSDK/FacebookSDK.h>
 
 @interface dyaWebView ()
+
+@property (strong, nonatomic) NSMutableDictionary *postParams;
 
 @end
 
@@ -20,7 +23,8 @@ float val =0.5;
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        [self.shareButton setEnabled:FALSE];
+        [self.shareButton setHidden:TRUE];
     }
     return self;
 }
@@ -44,7 +48,7 @@ float val =0.5;
 - (IBAction)sliderValue:(UISlider *)sender {
     
     val = sender.value;
-    NSString *val = [NSString stringWithFormat:@"%d%%", (int) (sender.value * 100) ];
+    NSString *val = [NSString stringWithFormat:@"I agree : %d%%", (int) (sender.value * 100) ];
     self.valueLabel.text = val;
     
 }
@@ -56,5 +60,76 @@ float val =0.5;
     NSURLRequest* request = [NSURLRequest requestWithURL:nsUrl cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:30];
     
     [_webView loadRequest:request];
+    
+    [self.shareButton setEnabled:TRUE];
+    [self.shareButton setHidden:FALSE];
+    
 }
+
+- (IBAction)share:(UIButton *)sender {
+    
+    NSString *pageLink = [NSString stringWithFormat:@"http://www.pic-card.me/pm/storeResponse.php?code=%@",self.code];
+    NSString *imgLink = [NSString stringWithFormat:@"http://www.pic-card.me/pm/dya_logo.png"];
+    
+    self.postParams = [@{
+                                              @"link" : pageLink,
+                                              @"picture" : imgLink,
+                                              @"name" : @"Do You Agree",
+                                              @"caption" : @"Do you agree with ...",
+                                              @"description" : @"The mobile app that makes it easy to see if you agree"
+                                              } mutableCopy];
+
+    
+    if ([FBSession.activeSession.permissions
+         indexOfObject:@"publish_actions"] == NSNotFound) {
+        // No permissions found in session, ask for it
+        [FBSession.activeSession
+         requestNewPublishPermissions:@[@"publish_actions"]
+         defaultAudience:FBSessionDefaultAudienceFriends
+         completionHandler:^(FBSession *session, NSError *error) {
+             if (!error) {
+                 // If permissions granted, publish the story
+                 [self publishStory];
+             }
+         }];
+    } else {
+        // If permissions present, publish the story
+        [self publishStory];
+    }
+    
+    
+    
+}
+
+
+
+- (void)publishStory
+{
+    [FBRequestConnection
+     startWithGraphPath:@"me/feed"
+     parameters:self.postParams
+     HTTPMethod:@"POST"
+     completionHandler:^(FBRequestConnection *connection,
+                         id result,
+                         NSError *error) {
+         NSString *alertText;
+         if (error) {
+             alertText = [NSString stringWithFormat:
+                          @"error: domain = %@, code = %d",
+                          error.domain, error.code];
+         } else {
+             alertText = [NSString stringWithFormat:
+                          @"Thanks for sharing",
+                          result[@"id"]];
+         }
+         // Show the result in an alert
+         [[[UIAlertView alloc] initWithTitle:@"Posted"
+                                     message:alertText
+                                    delegate:self
+                           cancelButtonTitle:@"OK!"
+                           otherButtonTitles:nil]
+          show];
+     }];
+}
+
 @end

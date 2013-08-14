@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0E2A19DA17BA81F400DB6E02"
-               BuildableName = "doyouagree.app"
-               BlueprintName = "doyouagree"
-               ReferencedContainer = "container:doyouagree.xcodeproj">
+               BuildableName = "DoYouAgree.app"
+               BlueprintName = "DoYouAgree"
+               ReferencedContainer = "container:DoYouAgree.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0E2A19DA17BA81F400DB6E02"
-            BuildableName = "doyouagree.app"
-            BlueprintName = "doyouagree"
-            ReferencedContainer = "container:doyouagree.xcodeproj">
+            BuildableName = "DoYouAgree.app"
+            BlueprintName = "DoYouAgree"
+            ReferencedContainer = "container:DoYouAgree.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -52,9 +52,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0E2A19DA17BA81F400DB6E02"
-            BuildableName = "doyouagree.app"
-            BlueprintName = "doyouagree"
-            ReferencedContainer = "container:doyouagree.xcodeproj">
+            BuildableName = "DoYouAgree.app"
+            BlueprintName = "DoYouAgree"
+            ReferencedContainer = "container:DoYouAgree.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -70,9 +70,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0E2A19DA17BA81F400DB6E02"
-            BuildableName = "doyouagree.app"
-            BlueprintName = "doyouagree"
-            ReferencedContainer = "container:doyouagree.xcodeproj">
+            BuildableName = "DoYouAgree.app"
+            BlueprintName = "DoYouAgree"
+            ReferencedContainer = "container:DoYouAgree.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
