@@ -16,7 +16,7 @@
 @end
 
 @implementation dyaWebView
-
+NSString *domain = @"http://www.doyouagree.co.uk/pm/";
 float val =0.5;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -32,7 +32,7 @@ float val =0.5;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSString* url = [NSString stringWithFormat:@"http://www.pic-card.me/pm/%@.html",self.code];
+    NSString* url = [NSString stringWithFormat:@"%@%@.html",domain,self.code];
     NSURL* nsUrl = [NSURL URLWithString:url];
     
     NSURLRequest* request = [NSURLRequest requestWithURL:nsUrl cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:30];
@@ -54,7 +54,7 @@ float val =0.5;
 }
 
 - (IBAction)okButton:(UIButton *)sender {
-    NSString* url = [NSString stringWithFormat:@"http://www.pic-card.me/pm/storeResponse.php?code=%@&value=%f&user=%@",self.code,val,self.fbUserID];
+    NSString* url = [NSString stringWithFormat:@"%@storeResponse.php?code=%@&value=%f&user=%@",domain,self.code,val,self.fbUserID];
     NSURL* nsUrl = [NSURL URLWithString:url];
     
     NSURLRequest* request = [NSURLRequest requestWithURL:nsUrl cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:30];
@@ -68,8 +68,8 @@ float val =0.5;
 
 - (IBAction)share:(UIButton *)sender {
     
-    NSString *pageLink = [NSString stringWithFormat:@"http://www.pic-card.me/pm/storeResponse.php?code=%@",self.code];
-    NSString *imgLink = [NSString stringWithFormat:@"http://www.pic-card.me/pm/dya_logo.png"];
+    NSString *pageLink = [NSString stringWithFormat:@"%@storeResponse.php?code=%@",domain,self.code];
+    NSString *imgLink = [NSString stringWithFormat:@"%@dya_logo.png",domain];
     
     self.postParams = [@{
                                               @"link" : pageLink,
@@ -119,8 +119,7 @@ float val =0.5;
                           error.domain, error.code];
          } else {
              alertText = [NSString stringWithFormat:
-                          @"Thanks for sharing",
-                          result[@"id"]];
+                          @"Thanks for sharing"];
          }
          // Show the result in an alert
          [[[UIAlertView alloc] initWithTitle:@"Posted"
