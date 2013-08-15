@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>DoYouAgree copy.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>10</integer>
+		</dict>
 		<key>doyouagree.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -13,6 +18,11 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>0E2A19DA17BA81F400DB6E02</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0E63B77117BBED4700D59099</key>
 		<dict>
 			<key>primary</key>
 			<true/>

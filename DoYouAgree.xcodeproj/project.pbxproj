@@ -340,6 +340,7 @@
 		0E63B76B17BBDD1A00D59099 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		0E63B76D17BBDDC300D59099 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		0E63B76F17BBDDDD00D59099 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		0E63B79417BBED4700D59099 /* DoYouAgree copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "DoYouAgree copy-Info.plist"; path = "/Users/tomberman/Development/doyouagree/DoYouAgree copy-Info.plist"; sourceTree = "<absolute>"; };
 		0EF415DF17BBC13C00AEE85E /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
 		0EF415E017BBC13C00AEE85E /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
 		0EF415E117BBC13C00AEE85E /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
@@ -377,6 +378,7 @@
 				0E2A19E417BA81F400DB6E02 /* doyouagree */,
 				0E2A19DD17BA81F400DB6E02 /* Frameworks */,
 				0E2A19DC17BA81F400DB6E02 /* Products */,
+				0E63B79417BBED4700D59099 /* DoYouAgree copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1406,6 +1408,7 @@
 		0E2A1A0017BA81F400DB6E02 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: T Berman";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../Documents/FacebookSDK\"",
@@ -1414,6 +1417,7 @@
 				GCC_PREFIX_HEADER = "doyouagree/DoYouAgree-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/doyouagree/DoYouAgree-Info.plist";
 				PRODUCT_NAME = DoYouAgree;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "F08C842F-BF1C-4169-ACAB-83A3200A6736";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
