@@ -16,13 +16,14 @@
 @end
 
 @implementation dyaWebView
-NSString *domain = @"http://www.doyouagree.co.uk/pm/";
+NSString *domain = @"http://www.doyouagree.co.uk/";
 float val =0.5;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        [self.slider setEnabled:TRUE];
         [self.shareButton setEnabled:FALSE];
         [self.shareButton setHidden:TRUE];
     }
@@ -32,6 +33,10 @@ float val =0.5;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    if ([self.code isEqualToString:@""]) {
+     self.code =@"BrokeLink";
+    }
     NSString* url = [NSString stringWithFormat:@"%@%@.html",domain,self.code];
     NSURL* nsUrl = [NSURL URLWithString:url];
     
@@ -60,6 +65,8 @@ float val =0.5;
     NSURLRequest* request = [NSURLRequest requestWithURL:nsUrl cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:30];
     
     [_webView loadRequest:request];
+    
+    [self.slider setEnabled:FALSE];
     
     [self.shareButton setEnabled:TRUE];
     [self.shareButton setHidden:FALSE];

@@ -18,6 +18,7 @@
 - (IBAction)sliderValue:(UISlider *)sender;
 - (IBAction)okButton:(UIButton *)sender;
 
+@property (strong, nonatomic) IBOutlet UISlider *slider;
 - (IBAction)share:(UIButton *)sender;
 @property (strong, nonatomic) IBOutlet UIButton *shareButton;
 

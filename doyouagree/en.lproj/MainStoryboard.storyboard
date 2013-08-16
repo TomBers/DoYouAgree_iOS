@@ -14,7 +14,7 @@
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DMH-Zt-wKy">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="192" id="58f-OD-Rn0"/>
+                                    <constraint firstAttribute="width" constant="100" id="BLh-Lk-Arb"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -28,6 +28,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejZ-DS-Uqv">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="aFD-J1-mCs"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Enter">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -48,11 +51,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="kIi-Nc-YRg" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="2fd-kB-kgI"/>
+                            <constraint firstItem="ejZ-DS-Uqv" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="1ch-zY-3Fq"/>
                             <constraint firstItem="kIi-Nc-YRg" firstAttribute="top" secondItem="3" secondAttribute="top" constant="134" id="9Qt-fm-sP7"/>
                             <constraint firstItem="ejZ-DS-Uqv" firstAttribute="top" secondItem="DMH-Zt-wKy" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Cy4-hg-y19"/>
-                            <constraint firstItem="ejZ-DS-Uqv" firstAttribute="centerX" secondItem="DMH-Zt-wKy" secondAttribute="centerX" type="default" id="Kca-Kf-C3x"/>
-                            <constraint firstItem="kIi-Nc-YRg" firstAttribute="centerX" secondItem="DMH-Zt-wKy" secondAttribute="centerX" type="default" id="UIQ-eZ-rsj"/>
+                            <constraint firstItem="DMH-Zt-wKy" firstAttribute="leading" secondItem="ejZ-DS-Uqv" secondAttribute="leading" type="default" id="W7P-z4-RJu"/>
+                            <constraint firstItem="DMH-Zt-wKy" firstAttribute="centerX" secondItem="kIi-Nc-YRg" secondAttribute="centerX" type="default" id="agH-Ct-sbq"/>
+                            <constraint firstItem="DMH-Zt-wKy" firstAttribute="trailing" secondItem="ejZ-DS-Uqv" secondAttribute="trailing" type="default" id="eBG-cs-tmU"/>
                             <constraint firstItem="DMH-Zt-wKy" firstAttribute="top" secondItem="kIi-Nc-YRg" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="jdV-Fn-wjZ"/>
                             <constraint firstItem="hqG-Is-eVM" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="pRh-gN-sPu"/>
                             <constraint firstItem="hqG-Is-eVM" firstAttribute="top" secondItem="3" secondAttribute="top" constant="53" id="wle-Nd-2Ci"/>
@@ -79,12 +83,15 @@
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nN2-Ag-WqT">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="418" id="RtZ-3w-oc8"/>
+                                    <constraint firstAttribute="height" constant="418" id="tDg-an-9Ez"/>
                                 </constraints>
                             </webView>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="1uU-Qb-1jP">
+                                <color key="minimumTrackTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="maximumTrackTintColor" red="0.99995561079999995" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="thumbTintColor" white="0.75712819343065696" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <action selector="sliderValue:" destination="inp-wL-rrB" eventType="valueChanged" id="a70-WN-kMM"/>
+                                    <action selector="sliderValue:" destination="inp-wL-rrB" eventType="valueChanged" id="Uug-WK-5ah"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="I Agree : 50%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IxN-Sk-X3p">
@@ -94,7 +101,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RLy-IA-YAN">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="tgg-Ey-9aZ"/>
+                                    <constraint firstAttribute="height" constant="41" id="1Qv-X9-fwE"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Agree">
@@ -109,6 +116,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dT3-uM-3e0">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="NUt-Oj-CY0"/>
+                                    <constraint firstAttribute="height" constant="41" id="nAi-2v-Zzc"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Back">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -121,9 +132,12 @@
                                     <segue destination="2" kind="modal" modalTransitionStyle="flipHorizontal" id="r2Z-2u-nAo"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZZj-5s-uGX">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZZj-5s-uGX">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="OaF-aN-DiB"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Share">
+                                <state key="normal" backgroundImage="FB-LikeButton-online-114.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -139,22 +153,25 @@
                         <constraints>
                             <constraint firstItem="nN2-Ag-WqT" firstAttribute="trailing" secondItem="ktQ-s0-ngJ" secondAttribute="trailing" type="default" id="1Lb-ui-F0K"/>
                             <constraint firstItem="IxN-Sk-X3p" firstAttribute="top" secondItem="1uU-Qb-1jP" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="1kC-d8-5dX"/>
+                            <constraint firstItem="RLy-IA-YAN" firstAttribute="bottom" secondItem="ZZj-5s-uGX" secondAttribute="bottom" type="default" id="4OQ-n2-uxW"/>
+                            <constraint firstItem="dT3-uM-3e0" firstAttribute="leading" secondItem="ktQ-s0-ngJ" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="6qY-Xi-QJL"/>
                             <constraint firstItem="nN2-Ag-WqT" firstAttribute="leading" secondItem="ktQ-s0-ngJ" secondAttribute="leading" type="default" id="7Rf-Yx-lxu"/>
-                            <constraint firstItem="ZZj-5s-uGX" firstAttribute="baseline" secondItem="dT3-uM-3e0" secondAttribute="baseline" type="default" id="Icu-RG-TqI"/>
+                            <constraint firstItem="ZZj-5s-uGX" firstAttribute="top" secondItem="dT3-uM-3e0" secondAttribute="top" type="default" id="9oh-88-GEc"/>
                             <constraint firstItem="nN2-Ag-WqT" firstAttribute="top" secondItem="ktQ-s0-ngJ" secondAttribute="top" type="default" id="Ilo-Sq-qUn"/>
-                            <constraint firstAttribute="trailing" secondItem="RLy-IA-YAN" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="LQH-H6-a7O"/>
+                            <constraint firstItem="ZZj-5s-uGX" firstAttribute="leading" secondItem="dT3-uM-3e0" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="MSJ-ek-q19"/>
                             <constraint firstItem="1uU-Qb-1jP" firstAttribute="top" secondItem="nN2-Ag-WqT" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="WDE-Eg-jr2"/>
-                            <constraint firstAttribute="bottom" secondItem="ZZj-5s-uGX" secondAttribute="bottom" constant="12" id="cTJ-wf-7nF"/>
-                            <constraint firstItem="ZZj-5s-uGX" firstAttribute="baseline" secondItem="RLy-IA-YAN" secondAttribute="baseline" type="default" id="cw2-pq-VzF"/>
+                            <constraint firstAttribute="bottom" secondItem="ZZj-5s-uGX" secondAttribute="bottom" constant="13" id="erM-34-Tar"/>
                             <constraint firstItem="IxN-Sk-X3p" firstAttribute="centerX" secondItem="1uU-Qb-1jP" secondAttribute="centerX" type="default" id="fHY-9R-j2B"/>
+                            <constraint firstItem="RLy-IA-YAN" firstAttribute="centerY" secondItem="ZZj-5s-uGX" secondAttribute="centerY" type="default" id="haT-BD-Uwz"/>
+                            <constraint firstItem="RLy-IA-YAN" firstAttribute="leading" secondItem="ZZj-5s-uGX" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="qDk-ux-gxR"/>
                             <constraint firstAttribute="trailing" secondItem="1uU-Qb-1jP" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="sCQ-L9-D78"/>
-                            <constraint firstItem="RLy-IA-YAN" firstAttribute="leading" secondItem="ZZj-5s-uGX" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="sf8-iy-vJF"/>
+                            <constraint firstAttribute="trailing" secondItem="RLy-IA-YAN" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="ufU-z0-Odo"/>
                             <constraint firstItem="1uU-Qb-1jP" firstAttribute="leading" secondItem="ktQ-s0-ngJ" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="yey-an-EgE"/>
-                            <constraint firstItem="dT3-uM-3e0" firstAttribute="leading" secondItem="ktQ-s0-ngJ" secondAttribute="leading" constant="13" id="ziD-sJ-Kx6"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="shareButton" destination="ZZj-5s-uGX" id="Gif-bh-gPM"/>
+                        <outlet property="slider" destination="1uU-Qb-1jP" id="Pr9-q6-QgS"/>
                         <outlet property="valueLabel" destination="IxN-Sk-X3p" id="o3k-f2-GTL"/>
                         <outlet property="webView" destination="nN2-Ag-WqT" id="nkz-wX-Ljo"/>
                     </connections>
@@ -164,6 +181,9 @@
             <point key="canvasLocation" x="637" y="90"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="FB-LikeButton-online-114.png" width="114" height="48"/>
+    </resources>
     <classes>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
@@ -184,6 +204,7 @@
                 <relationship kind="action" name="share:" candidateClass="UIButton"/>
                 <relationship kind="action" name="sliderValue:" candidateClass="UISlider"/>
                 <relationship kind="outlet" name="shareButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="slider" candidateClass="UISlider"/>
                 <relationship kind="outlet" name="valueLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
             </relationships>
