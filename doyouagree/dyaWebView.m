@@ -53,7 +53,7 @@ float val =0.5;
 - (IBAction)sliderValue:(UISlider *)sender {
     
     val = sender.value;
-    NSString *val = [NSString stringWithFormat:@"I agree : %d%%", (int) (sender.value * 100) ];
+    NSString *val = [NSString stringWithFormat:@"I Agree : %d%%", (int) (sender.value * 100) ];
     self.valueLabel.text = val;
     
 }
