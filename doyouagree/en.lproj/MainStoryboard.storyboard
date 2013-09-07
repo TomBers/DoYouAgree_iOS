@@ -83,13 +83,10 @@
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nN2-Ag-WqT">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="339" id="DEf-cc-95K"/>
+                                    <constraint firstAttribute="height" constant="357" id="MAs-5p-0C1"/>
                                 </constraints>
                             </webView>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="1uU-Qb-1jP">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="280" id="Z82-mr-eFK"/>
-                                </constraints>
                                 <color key="minimumTrackTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="maximumTrackTintColor" red="0.99995561079999995" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="thumbTintColor" white="0.75712819343065696" alpha="1" colorSpace="calibratedWhite"/>
@@ -97,12 +94,19 @@
                                     <action selector="sliderValue:" destination="inp-wL-rrB" eventType="valueChanged" id="Uug-WK-5ah"/>
                                 </connections>
                             </slider>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="I Agree : 50%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IxN-Sk-X3p">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="I Agree : 50%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IxN-Sk-X3p">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="104" id="EON-lb-MIZ"/>
+                                    <constraint firstAttribute="height" constant="17" id="mvc-fw-44I"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RLy-IA-YAN">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RLy-IA-YAN">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="BBV-7U-LEc"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Agree">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -118,7 +122,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dT3-uM-3e0">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" id="NUt-Oj-CY0"/>
-                                    <constraint firstAttribute="height" constant="41" id="nAi-2v-Zzc"/>
+                                    <constraint firstAttribute="height" constant="37" id="STH-VR-8IJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Back">
@@ -134,6 +138,7 @@
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZZj-5s-uGX">
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="NeQ-ul-Hec"/>
                                     <constraint firstAttribute="width" constant="100" id="OaF-aN-DiB"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -151,25 +156,25 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="IxN-Sk-X3p" firstAttribute="top" secondItem="1uU-Qb-1jP" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="04P-be-fS5"/>
                             <constraint firstItem="nN2-Ag-WqT" firstAttribute="trailing" secondItem="ktQ-s0-ngJ" secondAttribute="trailing" type="default" id="1Lb-ui-F0K"/>
                             <constraint firstItem="dT3-uM-3e0" firstAttribute="leading" secondItem="ktQ-s0-ngJ" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="6qY-Xi-QJL"/>
                             <constraint firstItem="nN2-Ag-WqT" firstAttribute="leading" secondItem="ktQ-s0-ngJ" secondAttribute="leading" type="default" id="7Rf-Yx-lxu"/>
-                            <constraint firstItem="ZZj-5s-uGX" firstAttribute="top" secondItem="dT3-uM-3e0" secondAttribute="top" type="default" id="7Wf-4F-UWv"/>
+                            <constraint firstItem="1uU-Qb-1jP" firstAttribute="leading" secondItem="ktQ-s0-ngJ" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="CH4-Uu-ejy"/>
+                            <constraint firstItem="RLy-IA-YAN" firstAttribute="leading" secondItem="ZZj-5s-uGX" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="G0a-Ys-dWU"/>
                             <constraint firstItem="nN2-Ag-WqT" firstAttribute="top" secondItem="ktQ-s0-ngJ" secondAttribute="top" type="default" id="Ilo-Sq-qUn"/>
-                            <constraint firstItem="IxN-Sk-X3p" firstAttribute="centerX" secondItem="1uU-Qb-1jP" secondAttribute="centerX" type="default" id="Jww-zx-eRe"/>
-                            <constraint firstItem="1uU-Qb-1jP" firstAttribute="top" secondItem="nN2-Ag-WqT" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="M3v-8O-Igo"/>
-                            <constraint firstItem="ZZj-5s-uGX" firstAttribute="leading" secondItem="dT3-uM-3e0" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="MSJ-ek-q19"/>
-                            <constraint firstItem="ZZj-5s-uGX" firstAttribute="bottom" secondItem="dT3-uM-3e0" secondAttribute="bottom" type="default" id="NAH-fl-k42"/>
-                            <constraint firstItem="ZZj-5s-uGX" firstAttribute="bottom" secondItem="RLy-IA-YAN" secondAttribute="bottom" type="default" id="RJ5-60-FV2"/>
-                            <constraint firstItem="ZZj-5s-uGX" firstAttribute="top" secondItem="RLy-IA-YAN" secondAttribute="top" type="default" id="ZzT-oo-fwW"/>
-                            <constraint firstItem="1uU-Qb-1jP" firstAttribute="leading" secondItem="ktQ-s0-ngJ" secondAttribute="leading" constant="30" id="cDj-eb-Lbj"/>
-                            <constraint firstItem="RLy-IA-YAN" firstAttribute="leading" secondItem="ZZj-5s-uGX" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="qDk-ux-gxR"/>
-                            <constraint firstAttribute="trailing" secondItem="RLy-IA-YAN" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="ufU-z0-Odo"/>
-                            <constraint firstAttribute="bottom" secondItem="dT3-uM-3e0" secondAttribute="bottom" constant="14" id="wmv-8f-p0Z"/>
+                            <constraint firstItem="ZZj-5s-uGX" firstAttribute="leading" secondItem="ktQ-s0-ngJ" secondAttribute="leading" constant="102" id="ZXU-qg-p5W"/>
+                            <constraint firstAttribute="bottom" secondItem="ZZj-5s-uGX" secondAttribute="bottom" constant="7" id="ZvP-Qa-qOg"/>
+                            <constraint firstAttribute="trailing" secondItem="1uU-Qb-1jP" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="a54-cL-1hj"/>
+                            <constraint firstItem="1uU-Qb-1jP" firstAttribute="centerX" secondItem="IxN-Sk-X3p" secondAttribute="centerX" type="default" id="dHc-3F-Drz"/>
+                            <constraint firstItem="1uU-Qb-1jP" firstAttribute="top" secondItem="nN2-Ag-WqT" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="hzn-fM-at3"/>
+                            <constraint firstItem="RLy-IA-YAN" firstAttribute="top" secondItem="ZZj-5s-uGX" secondAttribute="top" type="default" id="iZC-OC-FAs"/>
+                            <constraint firstItem="IxN-Sk-X3p" firstAttribute="top" secondItem="1uU-Qb-1jP" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="rDp-re-m8i"/>
+                            <constraint firstItem="dT3-uM-3e0" firstAttribute="top" secondItem="ZZj-5s-uGX" secondAttribute="top" type="default" id="uBX-yS-oIz"/>
+                            <constraint firstItem="dT3-uM-3e0" firstAttribute="bottom" secondItem="RLy-IA-YAN" secondAttribute="bottom" type="default" id="w5f-Dh-I97"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="agreeButton" destination="RLy-IA-YAN" id="nBM-sP-FFc"/>
                         <outlet property="shareButton" destination="ZZj-5s-uGX" id="Gif-bh-gPM"/>
                         <outlet property="slider" destination="1uU-Qb-1jP" id="Pr9-q6-QgS"/>
                         <outlet property="valueLabel" destination="IxN-Sk-X3p" id="o3k-f2-GTL"/>
@@ -203,6 +208,7 @@
                 <relationship kind="action" name="okButton:" candidateClass="UIButton"/>
                 <relationship kind="action" name="share:" candidateClass="UIButton"/>
                 <relationship kind="action" name="sliderValue:" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="agreeButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="shareButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="slider" candidateClass="UISlider"/>
                 <relationship kind="outlet" name="valueLabel" candidateClass="UILabel"/>

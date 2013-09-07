@@ -26,6 +26,8 @@ float val =0.5;
         [self.slider setEnabled:TRUE];
         [self.shareButton setEnabled:FALSE];
         [self.shareButton setHidden:TRUE];
+        [self.agreeButton setEnabled:FALSE];
+       
     }
     return self;
 }
@@ -55,6 +57,7 @@ float val =0.5;
     val = sender.value;
     NSString *val = [NSString stringWithFormat:@"I Agree : %d%%", (int) (sender.value * 100) ];
     self.valueLabel.text = val;
+    [self.agreeButton setEnabled:TRUE];
     
 }
 
@@ -68,14 +71,26 @@ float val =0.5;
     
     [self.slider setEnabled:FALSE];
     
+    [self.agreeButton setEnabled:FALSE];
+    
+    //NSLog(@"Fb User : %@",self.fbUserID);
+    if( [self.fbUserID length] > 0 ){
     [self.shareButton setEnabled:TRUE];
     [self.shareButton setHidden:FALSE];
+    }
     
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+ 
+    [self.webView loadHTMLString: @"" baseURL: nil];
+    
+    //NSLog(@"Segue to main page");
 }
 
 - (IBAction)share:(UIButton *)sender {
     
-    NSString *pageLink = [NSString stringWithFormat:@"%@storeResponse.php?code=%@",domain,self.code];
+    NSString *pageLink = [NSString stringWithFormat:@"%@webGraph.php?code=%@",domain,self.code];
     NSString *imgLink = [NSString stringWithFormat:@"%@dya_logo.png",domain];
     
     self.postParams = [@{
@@ -137,5 +152,6 @@ float val =0.5;
           show];
      }];
 }
+
 
 @end

@@ -289,6 +289,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "doyouagree/DoYouAgree-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/doyouagree/DoYouAgree-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = DoYouAgree;
 				WRAPPER_EXTENSION = app;
 			};
@@ -305,6 +306,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "doyouagree/DoYouAgree-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/doyouagree/DoYouAgree-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = DoYouAgree;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "F08C842F-BF1C-4169-ACAB-83A3200A6736";
 				WRAPPER_EXTENSION = app;
