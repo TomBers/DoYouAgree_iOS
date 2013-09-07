@@ -167,10 +167,11 @@
                             <constraint firstAttribute="trailing" secondItem="1uU-Qb-1jP" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="a54-cL-1hj"/>
                             <constraint firstItem="1uU-Qb-1jP" firstAttribute="centerX" secondItem="IxN-Sk-X3p" secondAttribute="centerX" type="default" id="dHc-3F-Drz"/>
                             <constraint firstItem="1uU-Qb-1jP" firstAttribute="top" secondItem="nN2-Ag-WqT" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="hzn-fM-at3"/>
-                            <constraint firstItem="RLy-IA-YAN" firstAttribute="top" secondItem="ZZj-5s-uGX" secondAttribute="top" type="default" id="iZC-OC-FAs"/>
+                            <constraint firstItem="RLy-IA-YAN" firstAttribute="top" secondItem="dT3-uM-3e0" secondAttribute="top" type="default" id="kbl-n0-Ajf"/>
                             <constraint firstItem="IxN-Sk-X3p" firstAttribute="top" secondItem="1uU-Qb-1jP" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="rDp-re-m8i"/>
-                            <constraint firstItem="dT3-uM-3e0" firstAttribute="top" secondItem="ZZj-5s-uGX" secondAttribute="top" type="default" id="uBX-yS-oIz"/>
+                            <constraint firstAttribute="bottom" secondItem="dT3-uM-3e0" secondAttribute="bottom" constant="9" id="tma-kk-PTY"/>
                             <constraint firstItem="dT3-uM-3e0" firstAttribute="bottom" secondItem="RLy-IA-YAN" secondAttribute="bottom" type="default" id="w5f-Dh-I97"/>
+                            <constraint firstItem="RLy-IA-YAN" firstAttribute="baseline" secondItem="dT3-uM-3e0" secondAttribute="baseline" type="default" id="yYk-9V-k8t"/>
                         </constraints>
                     </view>
                     <connections>
@@ -189,33 +190,6 @@
     <resources>
         <image name="FB-LikeButton-online-114.png" width="114" height="48"/>
     </resources>
-    <classes>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="dyaViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/dyaViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="codeField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="fbUserLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="fbUserName" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="okButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="dyaWebView" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/dyaWebView.h"/>
-            <relationships>
-                <relationship kind="action" name="okButton:" candidateClass="UIButton"/>
-                <relationship kind="action" name="share:" candidateClass="UIButton"/>
-                <relationship kind="action" name="sliderValue:" candidateClass="UISlider"/>
-                <relationship kind="outlet" name="agreeButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="shareButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="slider" candidateClass="UISlider"/>
-                <relationship kind="outlet" name="valueLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

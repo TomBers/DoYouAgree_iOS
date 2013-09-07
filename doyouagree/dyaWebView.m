@@ -90,6 +90,7 @@ float val =0.5;
 
 - (IBAction)share:(UIButton *)sender {
     
+    [self.shareButton setEnabled:FALSE];
     NSString *pageLink = [NSString stringWithFormat:@"%@webGraph.php?code=%@",domain,self.code];
     NSString *imgLink = [NSString stringWithFormat:@"%@dya_logo.png",domain];
     
