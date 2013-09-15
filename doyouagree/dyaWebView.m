@@ -8,6 +8,8 @@
 
 #import "dyaWebView.h"
 #import <FacebookSDK/FacebookSDK.h>
+#import "SVProgressHUD.h"
+
 
 @interface dyaWebView ()
 
@@ -27,6 +29,7 @@ float val =0.5;
         [self.shareButton setEnabled:FALSE];
         [self.shareButton setHidden:TRUE];
         [self.agreeButton setEnabled:FALSE];
+      
        
     }
     return self;
@@ -44,7 +47,24 @@ float val =0.5;
     
     NSURLRequest* request = [NSURLRequest requestWithURL:nsUrl cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:30];
     
-    [_webView loadRequest:request];}
+    [SVProgressHUD show];
+    NSURLConnection *urlConnection = [[NSURLConnection new] initWithRequest:request delegate:self startImmediately:YES];
+
+    
+    
+    [_webView loadRequest:request];
+    
+    
+    
+    
+
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection{
+    NSLog(@"Finished");
+    [SVProgressHUD dismiss];
+}
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -67,7 +87,17 @@ float val =0.5;
     
     NSURLRequest* request = [NSURLRequest requestWithURL:nsUrl cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:30];
     
+    [SVProgressHUD show];
+    NSURLConnection *urlConnection = [[NSURLConnection new] initWithRequest:request delegate:self startImmediately:YES];
+    
+    
     [_webView loadRequest:request];
+    
+    
+    
+    
+    
+    
     
     [self.slider setEnabled:FALSE];
     
@@ -82,9 +112,11 @@ float val =0.5;
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
- 
-    [self.webView loadHTMLString: @"" baseURL: nil];
     
+        [self.webView loadHTMLString: @"" baseURL: nil];
+    
+    
+//    [self.webView re]
     //NSLog(@"Segue to main page");
 }
 

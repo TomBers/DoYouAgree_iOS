@@ -24,14 +24,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    
     // Create Login View so that the app will be granted "status_update" permission.
-    FBLoginView *loginview = [[FBLoginView alloc] init];
+    FBLoginView *loginview = [FBLoginView new];
+    
     
     CGRect screenRect = [[UIScreen mainScreen] bounds];
-//    CGFloat screenWidth = screenRect.size.width;
     CGFloat screenHeight = screenRect.size.height;
     
     loginview.frame = CGRectOffset(loginview.frame, 0, (screenHeight - 75));
+
     loginview.delegate = self;
     
     [self.view addSubview:loginview];
@@ -77,14 +80,11 @@
 
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    
+//    [loginView ]
     dyaWebView *wbView = segue.destinationViewController;
     wbView.code = self.codeField.text;
     wbView.fbUserID = [self.loggedInUser id];
     
-//    pmWebViewController *webView = segue.destinationViewController;
-//    webView.code = self.codeField.text;
-//    webView.fbUserID = [self.loggedInUser id];
     
 }
 

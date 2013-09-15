@@ -18,6 +18,9 @@
 		0E2A19F817BA81F400DB6E02 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E2A19F617BA81F400DB6E02 /* MainStoryboard.storyboard */; };
 		0E2A19FB17BA81F400DB6E02 /* dyaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2A19FA17BA81F400DB6E02 /* dyaViewController.m */; };
 		0E2A1B3C17BA85BC00DB6E02 /* dyaWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2A1B3B17BA85BC00DB6E02 /* dyaWebView.m */; };
+		0E4B180E17E60A4B00CB1310 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0E4B180B17E60A4B00CB1310 /* SVProgressHUD.bundle */; };
+		0E4B180F17E60A4B00CB1310 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4B180D17E60A4B00CB1310 /* SVProgressHUD.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0E4B181117E60AC700CB1310 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E4B181017E60AC700CB1310 /* QuartzCore.framework */; };
 		0EA3305E17BE4C79005B62D0 /* FB-LikeButton-online-114.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EA3305D17BE4C79005B62D0 /* FB-LikeButton-online-114.png */; };
 		0EA79F6D17BD3E1300BF61B1 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EA79F6C17BD3E1300BF61B1 /* FacebookSDK.framework */; };
 		0EA79F6F17BD3E5C00BF61B1 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EA79F6E17BD3E5C00BF61B1 /* Default.png */; };
@@ -42,6 +45,10 @@
 		0E2A19FA17BA81F400DB6E02 /* dyaViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = dyaViewController.m; sourceTree = "<group>"; };
 		0E2A1B3A17BA85BC00DB6E02 /* dyaWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dyaWebView.h; sourceTree = "<group>"; };
 		0E2A1B3B17BA85BC00DB6E02 /* dyaWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dyaWebView.m; sourceTree = "<group>"; };
+		0E4B180B17E60A4B00CB1310 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		0E4B180C17E60A4B00CB1310 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		0E4B180D17E60A4B00CB1310 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		0E4B181017E60AC700CB1310 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		0EA3305D17BE4C79005B62D0 /* FB-LikeButton-online-114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FB-LikeButton-online-114.png"; sourceTree = "<group>"; };
 		0EA79F6C17BD3E1300BF61B1 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		0EA79F6E17BD3E5C00BF61B1 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -54,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E4B181117E60AC700CB1310 /* QuartzCore.framework in Frameworks */,
 				0EA79F6D17BD3E1300BF61B1 /* FacebookSDK.framework in Frameworks */,
 				0E2A19DF17BA81F400DB6E02 /* UIKit.framework in Frameworks */,
 				0E2A19E117BA81F400DB6E02 /* Foundation.framework in Frameworks */,
@@ -67,6 +75,8 @@
 		0E2A19D217BA81F400DB6E02 = {
 			isa = PBXGroup;
 			children = (
+				0E4B181017E60AC700CB1310 /* QuartzCore.framework */,
+				0E4B180A17E60A4B00CB1310 /* SVProgressHUD */,
 				0EA79F7217BD3E6800BF61B1 /* Default-568h@2x.png */,
 				0EA79F7017BD3E6200BF61B1 /* Default@2x.png */,
 				0EA79F6E17BD3E5C00BF61B1 /* Default.png */,
@@ -121,6 +131,16 @@
 				0E2A19EC17BA81F400DB6E02 /* DoYouAgree-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0E4B180A17E60A4B00CB1310 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				0E4B180B17E60A4B00CB1310 /* SVProgressHUD.bundle */,
+				0E4B180C17E60A4B00CB1310 /* SVProgressHUD.h */,
+				0E4B180D17E60A4B00CB1310 /* SVProgressHUD.m */,
+			);
+			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,6 +204,7 @@
 				0EA79F7117BD3E6200BF61B1 /* Default@2x.png in Resources */,
 				0EA79F7317BD3E6800BF61B1 /* Default-568h@2x.png in Resources */,
 				0EA3305E17BE4C79005B62D0 /* FB-LikeButton-online-114.png in Resources */,
+				0E4B180E17E60A4B00CB1310 /* SVProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +219,7 @@
 				0E2A19EF17BA81F400DB6E02 /* dyaAppDelegate.m in Sources */,
 				0E2A19FB17BA81F400DB6E02 /* dyaViewController.m in Sources */,
 				0E2A1B3C17BA85BC00DB6E02 /* dyaWebView.m in Sources */,
+				0E4B180F17E60A4B00CB1310 /* SVProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +304,7 @@
 		0E2A19FF17BA81F400DB6E02 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../Documents/FacebookSDK\"",
@@ -298,6 +321,7 @@
 		0E2A1A0017BA81F400DB6E02 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: T Berman";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
