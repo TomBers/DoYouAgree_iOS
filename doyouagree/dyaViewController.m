@@ -44,6 +44,7 @@
 
 - (void)didReceiveMemoryWarning
 {
+    NSLog(@"dyaVC : didReceiveMemoryWarning");
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
@@ -74,10 +75,11 @@
 - (BOOL) textFieldShouldReturn:(UITextField *) theTextField {
     
     [theTextField resignFirstResponder];
+    [self performSegueWithIdentifier: @"enterCodeSegue" sender: self];
     
     return YES;
 }
-
+//enterCodeSegue
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
 //    [loginView ]

@@ -61,14 +61,16 @@ float val =0.5;
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection{
-    NSLog(@"Finished");
+//    NSLog(@"Finished");
     [SVProgressHUD dismiss];
 }
 
 
 - (void)didReceiveMemoryWarning
 {
+    NSLog(@"WebView : didReceiveMemoryWarning");
     [super didReceiveMemoryWarning];
+    
     // Dispose of any resources that can be recreated.
 }
 
@@ -122,6 +124,7 @@ float val =0.5;
 
 - (IBAction)share:(UIButton *)sender {
     
+    [SVProgressHUD show];
     [self.shareButton setEnabled:FALSE];
     NSString *pageLink = [NSString stringWithFormat:@"%@webGraph.php?code=%@",domain,self.code];
     NSString *imgLink = [NSString stringWithFormat:@"%@dya_logo.png",domain];
@@ -173,6 +176,7 @@ float val =0.5;
                           @"error: domain = %@, code = %d",
                           error.domain, error.code];
          } else {
+             [SVProgressHUD dismiss];
              alertText = [NSString stringWithFormat:
                           @"Thanks for sharing"];
          }
