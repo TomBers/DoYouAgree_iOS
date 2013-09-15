@@ -40,6 +40,8 @@
     [self.view addSubview:loginview];
     
     [loginview sizeToFit];
+    
+    _codeField.userInteractionEnabled = YES;
 }
 
 - (void)didReceiveMemoryWarning
@@ -57,7 +59,7 @@
     // setting the profileID property of the FBProfilePictureView instance
     // causes the control to fetch and display the profile picture for the user
     self.loggedInUser = user;
-    self.okButton.enabled = true;
+    
     
 }
 
@@ -71,6 +73,16 @@
     self.fbUserName.text = @"Not logged in";
 }
 
+- (BOOL)textFieldShouldBeginEditing:(UITextField *) theTextField {
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:@"Alert Message" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Ok", nil];
+    [alert show];
+    
+//    [theTextField becomeFirstResponder];
+    
+    return YES;
+}
+
 
 - (BOOL) textFieldShouldReturn:(UITextField *) theTextField {
     
@@ -82,7 +94,7 @@
 //enterCodeSegue
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-//    [loginView ]
+
     dyaWebView *wbView = segue.destinationViewController;
     wbView.code = self.codeField.text;
     wbView.fbUserID = [self.loggedInUser id];
