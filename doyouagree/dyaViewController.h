@@ -13,5 +13,6 @@
 @property (strong, nonatomic) IBOutlet UITextField *codeField;
 @property (strong, nonatomic) IBOutlet UILabel *fbUserLabel;
 
+- (IBAction)returnToCodeEntry:(UIStoryboardSegue *)segue;
 
 @end

@@ -25,10 +25,8 @@
 {
     [super viewDidLoad];
     
-    
     // Create Login View so that the app will be granted "status_update" permission.
     FBLoginView *loginview = [FBLoginView new];
-    
     
     CGRect screenRect = [[UIScreen mainScreen] bounds];
     CGFloat screenHeight = screenRect.size.height;
@@ -40,8 +38,6 @@
     [self.view addSubview:loginview];
     
     [loginview sizeToFit];
-    
-    _codeField.userInteractionEnabled = YES;
 }
 
 - (void)didReceiveMemoryWarning
@@ -74,34 +70,35 @@
 }
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *) theTextField {
-    
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:@"Alert Message" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Ok", nil];
-    [alert show];
-    
-//    [theTextField becomeFirstResponder];
-    
     return YES;
 }
-
 
 - (BOOL) textFieldShouldReturn:(UITextField *) theTextField {
-    
-    [theTextField resignFirstResponder];
-    [self performSegueWithIdentifier: @"enterCodeSegue" sender: self];
-    
+	[theTextField resignFirstResponder];
     return YES;
 }
-//enterCodeSegue
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-
-    dyaWebView *wbView = segue.destinationViewController;
-    wbView.code = self.codeField.text;
-    wbView.fbUserID = [self.loggedInUser id];
-    
-    
+- (void) textFieldDidEndEditing:(UITextField *)textField
+{
+	[self performSegueWithIdentifier: @"enterCodeSegue" sender: self];
 }
 
+//enterCodeSegue
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+	if ([[segue identifier] isEqualToString:@"enterCodeSegue"]) {
+		[self.codeField resignFirstResponder];
+		dyaWebView *wbView = segue.destinationViewController;
+		wbView.code = self.codeField.text;
+		wbView.fbUserID = [self.loggedInUser id];
+	}
+}
+
+- (IBAction)returnToCodeEntry:(UIStoryboardSegue *)segue
+{
+	
+}
 
 
 @end
