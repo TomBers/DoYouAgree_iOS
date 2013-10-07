@@ -38,7 +38,8 @@
     [self.view addSubview:loginview];
     
     [loginview sizeToFit];
-}
+    
+    }
 
 - (void)didReceiveMemoryWarning
 {
@@ -97,7 +98,8 @@
 
 - (IBAction)returnToCodeEntry:(UIStoryboardSegue *)segue
 {
-	
+	[self.codeField setText:@""];
+
 }
 
 

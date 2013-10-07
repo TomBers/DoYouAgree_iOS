@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface dyaWebView : UIViewController
+@interface dyaWebView : UIViewController<NSURLConnectionDelegate>
 
+@property (strong,nonatomic) NSMutableData *responseData;
 @property (strong,nonatomic) NSString *code;
 @property (strong,nonatomic) NSString *fbUserID;
 

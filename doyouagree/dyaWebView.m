@@ -18,6 +18,8 @@
 @end
 
 @implementation dyaWebView
+NSMutableData *webdata;
+NSString *mime;
 NSString *domain = @"http://www.doyouagree.co.uk/";
 float val =0.5;
 
@@ -29,6 +31,8 @@ float val =0.5;
         [self.shareButton setEnabled:FALSE];
         [self.shareButton setHidden:TRUE];
         [self.agreeButton setEnabled:FALSE];
+        
+        
       
        
     }
@@ -51,19 +55,51 @@ float val =0.5;
     NSURLConnection *urlConnection = [[NSURLConnection new] initWithRequest:request delegate:self startImmediately:YES];
 
     
-    
-    [_webView loadRequest:request];
-    
-    
-    
-    
+    //[_webView loadRequest:request];
 
 }
 
-- (void)connectionDidFinishLoading:(NSURLConnection *)connection{
-//    NSLog(@"Finished");
+
+#pragma mark NSURLConnection Delegate Methods
+
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
+    // A response has been received, this is where we initialize the instance var you created
+    // so that we can append data to it in the didReceiveData method
+    // Furthermore, this method is called each time there is a redirect so reinitializing it
+    // also serves to clear it
+    
+    _responseData = [[NSMutableData alloc] init];
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+    // Append the new data to the instance variable you declared
+    [_responseData appendData:data];
+}
+
+- (NSCachedURLResponse *)connection:(NSURLConnection *)connection
+                  willCacheResponse:(NSCachedURLResponse*)cachedResponse {
+    // Return nil to indicate not necessary to store a cached response for this connection
+    return nil;
+}
+
+
+
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
+    // The request has failed for some reason!
+    // Check the error var
+}
+
+
+
+
+-(void)connectionDidFinishLoading:(NSURLConnection *)connection{
+    [self.webView loadData:_responseData MIMEType: mime textEncodingName: @"UTF-8" baseURL:nil];
+    
     [SVProgressHUD dismiss];
 }
+
+
+
 
 
 - (void)didReceiveMemoryWarning
@@ -93,7 +129,7 @@ float val =0.5;
     NSURLConnection *urlConnection = [[NSURLConnection new] initWithRequest:request delegate:self startImmediately:YES];
     
     
-    [_webView loadRequest:request];
+    //[_webView loadRequest:request];
     
     
     
