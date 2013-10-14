@@ -52,7 +52,7 @@
     // here we use helper properties of FBGraphUser to dot-through to first_name and
     // id properties of the json response from the server; alternatively we could use
     // NSDictionary methods such as objectForKey to get values from the my json object
-    self.fbUserLabel.text = [NSString stringWithFormat:@"Hello %@!", user.first_name];
+    self.fbUserLabel.text = [NSString stringWithFormat:@"Hello %@", user.first_name];
     // setting the profileID property of the FBProfilePictureView instance
     // causes the control to fetch and display the profile picture for the user
     self.loggedInUser = user;
@@ -66,9 +66,13 @@
     NSLog(@"FBLoginView encountered an error=%@", error);
 }
 
+
 - (void)loginViewShowingLoggedOutUser:(FBLoginView *)loginView {
-    self.fbUserName.text = @"Not logged in";
+    self.loggedInUser=nil;
+    self.fbUserLabel.text = [NSString stringWithFormat:@"Logged out"];
 }
+
+
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *) theTextField {
     return YES;
