@@ -96,7 +96,8 @@
 		[self.codeField resignFirstResponder];
 		dyaWebView *wbView = segue.destinationViewController;
 		wbView.code = self.codeField.text;
-		wbView.fbUserID = [self.loggedInUser id];
+		//wbView.fbUserID = [self.loggedInUser id];
+        wbView.fbUserID = [self.loggedInUser objectForKey:@"id"];
 	}
 }
 

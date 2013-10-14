@@ -21,6 +21,7 @@
 		0E4B180E17E60A4B00CB1310 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0E4B180B17E60A4B00CB1310 /* SVProgressHUD.bundle */; };
 		0E4B180F17E60A4B00CB1310 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4B180D17E60A4B00CB1310 /* SVProgressHUD.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		0E4B181117E60AC700CB1310 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E4B181017E60AC700CB1310 /* QuartzCore.framework */; };
+		0E678DCB180CA52A00ECC59A /* Icon@120Retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E678DCA180CA52A00ECC59A /* Icon@120Retina.png */; };
 		0EA3305E17BE4C79005B62D0 /* FB-LikeButton-online-114.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EA3305D17BE4C79005B62D0 /* FB-LikeButton-online-114.png */; };
 		0EA79F6D17BD3E1300BF61B1 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EA79F6C17BD3E1300BF61B1 /* FacebookSDK.framework */; };
 		0EA79F6F17BD3E5C00BF61B1 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EA79F6E17BD3E5C00BF61B1 /* Default.png */; };
@@ -49,6 +50,7 @@
 		0E4B180C17E60A4B00CB1310 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
 		0E4B180D17E60A4B00CB1310 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		0E4B181017E60AC700CB1310 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		0E678DCA180CA52A00ECC59A /* Icon@120Retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@120Retina.png"; sourceTree = "<group>"; };
 		0EA3305D17BE4C79005B62D0 /* FB-LikeButton-online-114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FB-LikeButton-online-114.png"; sourceTree = "<group>"; };
 		0EA79F6C17BD3E1300BF61B1 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		0EA79F6E17BD3E5C00BF61B1 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				0EA3305D17BE4C79005B62D0 /* FB-LikeButton-online-114.png */,
 				0EA79F6C17BD3E1300BF61B1 /* FacebookSDK.framework */,
 				0E06315317BD35EB0020A84B /* Icon@2x.png */,
+				0E678DCA180CA52A00ECC59A /* Icon@120Retina.png */,
 				0E06315117BD35DB0020A84B /* Icon.png */,
 				0E2A19E417BA81F400DB6E02 /* doyouagree */,
 				0E2A19DD17BA81F400DB6E02 /* Frameworks */,
@@ -198,6 +201,7 @@
 			files = (
 				0E2A19E917BA81F400DB6E02 /* InfoPlist.strings in Resources */,
 				0E2A19F817BA81F400DB6E02 /* MainStoryboard.storyboard in Resources */,
+				0E678DCB180CA52A00ECC59A /* Icon@120Retina.png in Resources */,
 				0E06315217BD35DB0020A84B /* Icon.png in Resources */,
 				0E06315417BD35EB0020A84B /* Icon@2x.png in Resources */,
 				0EA79F6F17BD3E5C00BF61B1 /* Default.png in Resources */,
