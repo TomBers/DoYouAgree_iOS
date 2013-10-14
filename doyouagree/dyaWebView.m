@@ -51,15 +51,16 @@ float val =0.5;
     
     NSURLRequest* request = [NSURLRequest requestWithURL:nsUrl cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:30];
     
-    
-    [SVProgressHUD show];
-    
     [_webView loadRequest:request];
-
 }
 
 
-- (void)webViewDidFinishLoad{
+- (void)webViewDidStartLoad:(UIWebView *)webView
+{
+	[SVProgressHUD show];
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView{
     
     [SVProgressHUD dismiss];
 }
@@ -88,16 +89,8 @@ float val =0.5;
     NSURL* nsUrl = [NSURL URLWithString:url];
     
     NSURLRequest* request = [NSURLRequest requestWithURL:nsUrl cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:30];
-    
-    [SVProgressHUD show];
-   
-    
+	
     [_webView loadRequest:request];
-    
-    
-    
-    
-    
     
     
     [self.slider setEnabled:FALSE];
