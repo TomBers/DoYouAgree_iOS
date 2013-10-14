@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface dyaWebView : UIViewController<NSURLConnectionDelegate>
+@interface dyaWebView : UIViewController<UIWebViewDelegate>
 
 @property (strong,nonatomic) NSMutableData *responseData;
 @property (strong,nonatomic) NSString *code;
